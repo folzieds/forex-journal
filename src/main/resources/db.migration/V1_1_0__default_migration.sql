@@ -82,4 +82,27 @@ VALUES  ('AUDCAD'),
         ('USDSEK'),
         ('USDSGD'),
         ('USDTRY'),
-        ('USDZAR')
+        ('USDZAR');
+
+CREATE TABLE IF NOT EXISTS price_action_types(
+  id            BIGINT NOT NULL AUTO_INCREMENT UNIQUE,
+  price_action  VARCHAR(255)
+);
+
+INSERT INTO price_action_types(price_action)
+VALUES  ('Engulfing Bar'),
+        ('Doji'),
+        ('Dragonfly Doji'),
+        ('GraveStone Doji'),
+        ('Morning star'),
+        ('Evening star'),
+        ('Hammer'),
+        ('Shooting star'),
+        ('Harami'),
+        ('Spinning tops'),
+        ('Tweezer Top'),
+        ('Tweezer Bottom'),
+        ('Three black crows'),
+        ('Three inside up'),
+        ('Three inside down'),
+        ('Three white soldiers'),
