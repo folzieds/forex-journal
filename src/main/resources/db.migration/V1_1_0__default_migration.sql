@@ -105,4 +105,21 @@ VALUES  ('Engulfing Bar'),
         ('Three black crows'),
         ('Three inside up'),
         ('Three inside down'),
-        ('Three white soldiers'),
+        ('Three white soldiers');
+
+CREATE TABLE IF NOT EXISTS timeframe(
+  id          BIGINT NOT NULL AUTO_INCREMENT UNIQUE,
+  timeframe   VARCHAR(3),
+  description VARCHAR(255)
+);
+
+INSERT INTO timeframe(timeframe, description)
+VALUES  ('M1','One minute'),
+        ('M5','five minutes'),
+        ('M15','fifteen minutes'),
+        ('M30','Thirty minutes'),
+        ('H1','One hour'),
+        ('H4','Four hours'),
+        ('D1','One day'),
+        ('W1','One week'),
+        ('MN','One Month');
